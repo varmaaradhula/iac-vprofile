@@ -48,9 +48,9 @@ jobs:
          id: validate
          run: terraform validate
 
-       - name: Terraform Plan -no-color -input=false -out planfile
+       - name: Terraform Plan
          id: plan
-         run: terraform plan
+         run: terraform plan -no-color -input=false -out planfile
          continue-on-error: true
 
        - name: Terraform Plan status
